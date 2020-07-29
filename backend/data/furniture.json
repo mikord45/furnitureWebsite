@@ -1,0 +1,184 @@
+    {
+        "furniture": [
+            {
+                "category": "cat-1",
+                "title": "first",
+                "description": "First description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-2",
+                "title": "second",
+                "description": "Second description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-3",
+                "title": "third",
+                "description": "Third description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-1",
+                "title": "first",
+                "description": "First description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-2",
+                "title": "second",
+                "description": "Second description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-3",
+                "title": "third",
+                "description": "Third description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-1",
+                "title": "first",
+                "description": "First description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-2",
+                "title": "second",
+                "description": "Second description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-3",
+                "title": "third",
+                "description": "Third description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-1",
+                "title": "first",
+                "description": "First description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-2",
+                "title": "second",
+                "description": "Second description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-3",
+                "title": "third",
+                "description": "Third description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-1",
+                "title": "first",
+                "description": "First description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-2",
+                "title": "second",
+                "description": "Second description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-1",
+                "title": "first",
+                "description": "First description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-2",
+                "title": "second",
+                "description": "Second description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-3",
+                "title": "third",
+                "description": "Third description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-3",
+                "title": "third",
+                "description": "Third description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-1",
+                "title": "first",
+                "description": "First description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-2",
+                "title": "second",
+                "description": "Second description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-3",
+                "title": "third",
+                "description": "Third description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-1",
+                "title": "first",
+                "description": "First description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-2",
+                "title": "second",
+                "description": "Second description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-3",
+                "title": "third",
+                "description": "Third description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-1",
+                "title": "first",
+                "description": "First description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-2",
+                "title": "second",
+                "description": "Second description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-3",
+                "title": "third",
+                "description": "Third description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-1",
+                "title": "first",
+                "description": "First description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-2",
+                "title": "second",
+                "description": "Second description",
+                "imgSrc": "/img1.png"
+            },
+            {
+                "category": "cat-3",
+                "title": "third",
+                "description": "Third description",
+                "imgSrc": "/img1.png"
+            }
+        ]
+    }

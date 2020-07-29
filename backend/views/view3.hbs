@@ -1,0 +1,91 @@
+<header>
+    <div id="menuOfTypes">
+        <div class="oneType" id="all"> <a> Wszystkie </a> </div>
+        <div class="oneType" id="category1"> <a> Kategoria 1 </a> </div>
+        <div class="oneType" id="category2"> <a> Kategoria 2 </a> </div>
+        <div class="oneType" id="category3"> <a> Kategoria 3 </a> </div>
+    </div>
+</header>
+<div>
+    <div id="posts">
+        {{#each context2.furniture}}
+        {{> oneFurniture}}
+        {{/each}}
+    </div>
+</div>
+<script src="projekty.js"></script>
+<script>
+
+    document.getElementById("all").addEventListener("click", function () {
+        let furniture = document.querySelectorAll(".post")
+        for (let i = 0; i < furniture.length; i++) {
+            furniture[i].style.opacity = 0
+        }
+        setTimeout(function () {
+            for (let i = 0; i < furniture.length; i++) {
+                furniture[i].style.display = "none"
+            }
+        }, 1000)
+        setTimeout(function () {
+            for (let i = 0; i < furniture.length; i++) {
+                furniture[i].style.display = "block"
+                furniture[i].style.opacity = 1
+            }
+        }, 1000)
+    })
+    document.getElementById("category1").addEventListener("click", function () {
+        let furniture = document.querySelectorAll(".post")
+        for (let i = 0; i < furniture.length; i++) {
+            furniture[i].style.opacity = 0
+        }
+        setTimeout(function () {
+            for (let i = 0; i < furniture.length; i++) {
+                furniture[i].style.display = "none"
+            }
+        }, 1000)
+        let properCategory = document.querySelectorAll(".cat-1")
+        setTimeout(function () {
+            for (let i = 0; i < properCategory.length; i++) {
+                properCategory[i].style.display = "block"
+                properCategory[i].style.opacity = 1
+            }
+        }, 1000)
+    })
+    document.getElementById("category2").addEventListener("click", function () {
+        let furniture = document.querySelectorAll(".post")
+        for (let i = 0; i < furniture.length; i++) {
+            furniture[i].style.opacity = 0
+        }
+        let properCategory = document.querySelectorAll(".cat-2")
+        setTimeout(function () {
+            for (let i = 0; i < furniture.length; i++) {
+                furniture[i].style.display = "none"
+            }
+        }, 1000)
+        setTimeout(function () {
+            for (let i = 0; i < properCategory.length; i++) {
+                properCategory[i].style.display = "block"
+                properCategory[i].style.opacity = 1
+            }
+        }, 1000)
+    })
+    document.getElementById("category3").addEventListener("click", function () {
+        console.log("spoko")
+        let furniture = document.querySelectorAll(".post")
+        for (let i = 0; i < furniture.length; i++) {
+            furniture[i].style.opacity = 0
+        }
+        let properCategory = document.querySelectorAll(".cat-3")
+        setTimeout(function () {
+            for (let i = 0; i < furniture.length; i++) {
+                furniture[i].style.display = "none"
+            }
+        }, 1000)
+        setTimeout(function () {
+            for (let i = 0; i < properCategory.length; i++) {
+                properCategory[i].style.display = "block"
+                properCategory[i].style.opacity = 1
+            }
+        }, 1000)
+    })
+</script>

@@ -1,0 +1,134 @@
+<div id="mainTextContact">
+    <p>
+        Kontakt
+    </p>
+</div>
+<div id="contactInfo">
+    <div id="leftContact" class="contactInfoPart">
+        <p class="smalltitle">Biuro obsługi klienta</p>
+        <p class="contactData">
+            Biuro Obsługi Klienta <br />
+            tel: 32 888 70 70<br />
+            e-mail: kontakt@agatameble.pl<br />
+            godziny pracy: pn.-sb. 10:00-20:00, nd. 10:00-18:00
+        </p>
+        <p class="additionalInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc justo diam, rhoncus eu
+            euismod finibus, venenatis et lorem. Fusce tempor vel ante ac sodales. Mauris eget enim et enim tincidunt
+            mattis a ac libero. Nullam nunc odio, consequat eget arcu id, varius interdum ex. Nam hendrerit consequat
+            dui, a tempor urna aliquam at. In fermentum, ex et facilisis ornare, diam orci malesuada nisl, eget
+            ultricies metus magna in enim. </p>
+    </div>
+    <div id="rightContact" class="contactInfoPart">
+        <p class="smalltitle">Dane kontaktowe</p>
+        <p class="contactData">
+            Siedziba Spółki: AGATA Spółka Akcyjna <br />
+            Al. Roździeńskiego 93 40-203 Katowice <br />
+            NIP: 634-019-74-76</p>
+        <p class="additionalInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc justo diam, rhoncus eu
+            euismod finibus, venenatis et lorem. Fusce tempor vel ante ac sodales. Mauris eget enim et enim tincidunt
+            mattis a ac libero. Nullam nunc odio, consequat eget arcu id, varius interdum ex. Nam hendrerit consequat
+            dui, a tempor urna aliquam at. In fermentum, ex et facilisis ornare, diam orci malesuada nisl, eget
+            ultricies metus magna in enim. </p>
+    </div>
+</div>
+<div id="contactForm">
+    <div id="textContactForm">
+        <p>
+            Formularz kontaktowy
+        </p>
+    </div>
+    <div id="form">
+        <div id="inputs">
+            <div class="partOfForm">
+                <div class="oneInput">
+                    <div class="labelDiv">
+                        <label>Imię</label>
+                    </div>
+                    <input name="name" type="text" id="name" />
+                </div>
+                <div class="oneInput">
+                    <div class="labelDiv">
+                        <label>Nazwisko</label>
+                    </div>
+                    <input name="surname" type="text" id="surname" />
+                </div>
+            </div>
+            <div class="partOfForm">
+                <div class="oneInput">
+                    <div class="labelDiv">
+                        <label>Adres E-mail</label>
+                    </div>
+                    <input name="mail" type="email" id="email" />
+                </div>
+                <div class="oneInput">
+                    <div class="labelDiv">
+                        <label>Numer telefonu</label>
+                    </div>
+                    <input name="telNumber" type="number" id="tel" />
+                </div>
+            </div>
+        </div>
+        <div id="textareaAndSend">
+            <textarea></textarea>
+            <button id="send">Wyślij</button>
+        </div>
+    </div>
+</div>
+<script>
+    let inputDivs = document.querySelectorAll(".oneInput")
+    for (let i = 0; i < inputDivs.length; i++) {
+        inputDivs[i].addEventListener("click", function () {
+            let allInputs = document.querySelectorAll("input")
+            for (let j = 0; j < allInputs.length; j++) {
+                if (allInputs[j].value == "") {
+                    allInputs[j].style.display = "none"
+                }
+            }
+            let properinput = inputDivs[i].querySelector("input")
+            properinput.style.display = "block"
+            properinput.focus()
+        })
+    }
+
+    let buttonSend = document.querySelector("#send")
+    buttonSend.addEventListener("click", function () {
+        let objToSend = {}
+        objToSend.name = document.querySelector("#name").value
+        objToSend.surname = document.querySelector("#surname").value
+        objToSend.email = document.querySelector("#email").value
+        objToSend.tel = document.querySelector("#tel").value
+        objToSend.text = document.querySelector("textarea").value
+        const email = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/
+        let properEmail = email.test(objToSend.email)
+        let properNumber = false
+        if (objToSend.tel.length == 9) {
+            properNumber = true
+        }
+        let errorInfo = ""
+        if (properEmail == false) {
+            errorInfo += "Wprowadzony e-mail jest niepoprawny \n"
+        }
+        if (properNumber == false) {
+            errorInfo += "Wprowadzony numer telefonu jest niepoprawny"
+        }
+        if (errorInfo != "") {
+            window.alert(errorInfo)
+        }
+        else {
+            fetch("http://localhost:3000/formSent", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(objToSend)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        }
+    })
+</script>
