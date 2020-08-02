@@ -8,6 +8,7 @@
 }
 .oneType{
     margin-left: 50px;
+    cursor: pointer;
 }
 header{
     background-color: #ced6c7;
@@ -182,4 +183,6 @@ header{
   h2{
     z-index: 10000 !important;
   }
+
+  
 
